@@ -51,6 +51,3 @@
   </script>
   
   <div id="myGraph" style="width:100%; height:400px;"></div>
-  
-
-  

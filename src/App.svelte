@@ -2,19 +2,21 @@
   import { Router, Route, Link } from "svelte-routing";
   import PieChart from "./components/PieChart.svelte";
   import AccPerTerritory from "./components/AccPerTerritory.svelte";
-  import OrdersPerTerr from "./components/OrdersPerTerr.svelte";
+  // import OrdersPerTerr from "./components/OrdersPerTerr.svelte";
+  // import Chart from "./components/Chart.svelte";
+  import OrdersWrapper from "./components/OrdersWrapper.svelte"
 </script>
 
-  <style>
+<style>
   main {
     background: radial-gradient(circle, rgba(255, 223, 223, 1) 0%, rgba(203, 232, 255, 1) 100%);
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
     margin: 0 auto;
-    max-width: 1200px;
-  }
+    max-width: 1200px;  */
+  } 
 
   nav {
     width: 100%;
@@ -36,11 +38,12 @@
   nav div:hover {
     background-color: #d0d0d0;
   } 
-</style> 
+</style>  
 
 <Router>
   <main>
-    <h1>D.E.A.D. Dashboard</h1>
+   
+    <h1 style="text-align: center;">D.E.A.D. Dashboard</h1>
     <nav>
       <Link to="/managers"><div>Managers</div></Link>
       <Link to="/company"><div>Company</div></Link>
@@ -49,6 +52,6 @@
 
     <Route path="/managers" component={PieChart} />
     <Route path="/company" component={AccPerTerritory} />
-    <Route path="/orders" component={OrdersPerTerr} />
+    <Route path="/orders" component={OrdersWrapper} />
   </main>
 </Router> 
